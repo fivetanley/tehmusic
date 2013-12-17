@@ -1,0 +1,9 @@
+<div class="pull-right controls">
+  <a class="moveToTop" title="move to top" href="#" {{action top}}>&#x2912;</a> &nbsp;
+  <a class="remove" title="remove..." href="#" {{action remove}}>&#x24e7;</a>
+</div>
+<img class="albumArt" {{bindAttr src=model.imageUrl}}>
+<div class="metadata-container">
+  <span class="title">{{model.title}}</span><br />
+  <span class="artist">{{model.artist}}</span>
+</div>

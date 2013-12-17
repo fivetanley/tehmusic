@@ -1,0 +1,7 @@
+<ul class="dropdown-menu" role="menu">
+  {{#each playlist in model}}
+    <li><a href="#" {{action selectPlaylist playlist}}>{{playlist.name}}</a></li>
+  {{/each}}
+  <li class="divider"></li>
+  <li><a href="#" {{action newPlaylist}}><i>New Playlist</i></a></li>
+</ul>

@@ -1,0 +1,35 @@
+<h2 class="form-signin-heading">Register</h2>
+
+{{#if message}}
+  <div class="alert alert-warning">{{message}}</div>
+{{/if}}
+
+<form role="form" style="max-width: 200px" {{action register on="submit"}}>
+  <div class="form-group">
+    <label>Username</label>
+    {{view Ember.TextField valueBinding="username" type="text" classNames="form-control"}}
+  </div>
+
+  <div class="form-group">
+    <label>Email Address</label>
+    {{view Ember.TextField valueBinding="email" type="email" classNames="form-control"}}
+  </div>
+
+  <div class="form-group">
+    <label>Password</label>
+    {{view Ember.TextField valueBinding="password" type="password" classNames="form-control"}}
+  </div>
+
+  <div class="form-group">
+    <label>Join Code</label>
+    {{view Ember.TextField valueBinding="joinCode" type="text" classNames="form-control"}}
+  </div>
+
+  <button class="btn btn-default" type="submit">Register</button>
+</form>
+
+<br /><br />
+
+<p>{{#linkTo "login"}}Already registered? Login here.{{/linkTo}}</p>
+
+

@@ -1,0 +1,13 @@
+{{render "current_song" App.currentSongInfo}}
+
+<h1>teh music</h1>
+
+<div class="row">
+  <div class="col-sm-6">
+    {{render "users" model.users}}
+  </div>
+
+  <div class="col-sm-6">
+    {{render "user_playlists" model.currentUser}}
+  </div>
+</div>

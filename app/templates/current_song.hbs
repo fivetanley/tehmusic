@@ -1,0 +1,26 @@
+<div id="currentSong" {{bind-attr class="muted:muted
+  model.song:currentSong :pull-right :panel :panel-primary :song :col-sm-6"}}>
+  <div class="pull-right controls">
+    {{#if currentUserIsDJ}}
+      <span {{action skip}}><span style="font-size: 1.2em"
+          class="glyphicon glyphicon-step-forward"></span></span>
+      &nbsp; 
+    {{/if}}
+    <span class="mute" {{action toggleMute}}><span style="font-size:
+        1.5em; position: relative; top: 4px;" class="glyphicon
+        glyphicon-volume-off"></span></span>
+  </div>
+
+  <img class="avatar pull-left" {{bindAttr src=user.avatarURL}}>
+  <img class="albumArt pull-left" {{bindAttr src=song.imageUrl}}>
+  <div class="metadata-container">
+    <span class="title">{{song.title}}</span><br />
+    <span class="artist">{{song.artist}}</span>
+  </div>
+
+  <div class="progress">
+    <div class="progress-bar progress-bar-info" role="progressbar"></div>
+  </div>
+
+  <audio style="display: none" id="audioPlayer" />
+</div>

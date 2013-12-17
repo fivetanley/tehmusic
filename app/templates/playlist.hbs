@@ -1,0 +1,12 @@
+<div>
+  <br />
+  <div>
+    {{model.songs.length}} songs.
+  </div>
+
+  <ul class="list-group">
+    {{zw-dropzone delegate=this auth=App.authInfo}}
+  </ul>
+
+  {{render "songs" model.songs}}
+</div>

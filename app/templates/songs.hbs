@@ -1,0 +1,7 @@
+<ul class="list-group sortable songs">
+  {{#each arrangedContent}}
+    <li class="list-group-item song" data-id="{{unbound id}}">
+      {{render "song" this}}
+    </li>
+  {{/each}}
+</ul>

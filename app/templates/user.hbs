@@ -1,0 +1,32 @@
+<div class="pull-right">
+  {{#if model.user.spinning}}
+    {{#if isSelf}}
+      <a href="#" {{action stepDown}}>Step down</a>
+    {{/if}}
+  {{else}}
+    {{#if isSelf}}
+      <a href="#" {{action stepUp}}>Step up</a>
+    {{/if}}
+  {{/if}}
+</div>
+
+<form class="form-inline" role="form">
+  <img class="avatar" {{bindAttr src="model.user.avatarURL"}} />
+  {{#if editing}}
+    <div class="form-group">
+      {{view Ember.TextField valueBinding="model.user.screenname" type="text" classNames="form-control"}}
+    </div>
+    <div class="form-group">
+      <button class="btn btn-default" {{action save}}>Save</button>
+      <a href="#" {{action cancel}}>Cancel</a>
+    </div>
+  {{else}}
+    {{#if isSelf}}
+      <a href="#" {{action edit}}>
+        {{model.user.screenname}}
+      </a>
+    {{else}}
+      {{model.user.screenname}}
+    {{/if}}
+  {{/if}}
+</form>

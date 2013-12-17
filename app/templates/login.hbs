@@ -1,0 +1,20 @@
+<h2 class="form-signin-heading">Login</h2>
+
+{{#if message}}
+  <div class="alert alert-warning">{{message}}</div>
+{{/if}}
+
+<form role="form" class="form-inline" {{action login on="submit"}}>
+  <div class="form-group">
+    {{view Ember.TextField valueBinding="username" type="text" classNames="form-control" placeholder="Username"}}
+  </div>
+  <div class="form-group">
+    {{view Ember.TextField valueBinding="password" type="password" classNames="form-control" placeholder="Password"}}
+  </div>
+  <button class="btn btn-default" type="submit">Sign in</button>
+</form>
+
+<br /><br />
+
+<p>{{#linkTo "register"}}No account? Register here.{{/linkTo}}</p>
+

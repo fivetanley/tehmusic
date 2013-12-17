@@ -1,0 +1,23 @@
+<h2>djs</h2>
+
+<ul class="list-group">
+  {{#each user in arrangedContent}}
+    {{#if user.user.spinning}}
+      <li class="list-group-item">
+        {{render "user" user}}
+      </li>
+    {{/if}}
+  {{/each}}
+</ul>
+
+<h2>everyone else</h2>
+
+<ul class="list-group">
+  {{#each user in arrangedContent}}
+    {{#unless user.user.spinning}}
+      <li class="list-group-item">
+        {{render "user" user}}
+      </li>
+    {{/unless}}
+  {{/each}}
+</ul>

@@ -1,0 +1,20 @@
+{
+  "name": "ember-app-kit",
+  "dependencies": {
+    "handlebars": "~1.1.2",
+    "jquery": "~1.9.1",
+    "qunit": "~1.12.0",
+    "ember": "~1.2.0",
+    "ember-resolver": "git://github.com/stefanpenner/ember-jj-abrams-resolver.git#master",
+    "ic-ajax": "~0.2",
+    "bootstrap": "~3.0.3",
+    "dropzone": "~3.8.2",
+    "id3-reader": "https://github.com/aadsm/JavaScript-ID3-Reader.git",
+    "jqueryui": "~1.10.3",
+    "fireplace": "~0.0.2"
+  },
+  "resolutions": {
+    "ember": "1.2.0",
+    "handlebars": "~1.1.2"
+  }
+}

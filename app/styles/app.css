@@ -1,0 +1,114 @@
+/* Put your CSS here */
+html, body {
+    margin: 20px;
+}
+
+img.avatar {
+  border-radius: 16px;
+  border: 1px solid #eee;
+  width: 32px;
+  height: 32px;
+}
+
+.zw-dropzone {
+  background-color: #eee;
+}
+
+.song .albumArt {
+  float: left;
+  width: 40px;
+  height: 40px;
+}
+
+.song .metadata-container {
+  padding-left: 48px;
+}
+
+.song .title {
+  font-weight: bold;
+}
+
+.song .artist {
+  color: #ccc;
+}
+
+ul.songs .controls {
+  display: none;
+}
+
+ul.songs .song:hover .controls {
+  display: block;
+}
+
+ul.songs li:first-of-type .moveToTop {
+  display: none
+}
+
+.zw-dropzone.dz-started .instructions {
+  display: none;
+}
+
+.zw-dropzone .dz-preview {
+  display: none;
+}
+
+.zw-dropzone .preview {
+  display: none;
+}
+
+.zw-dropzone.dz-started .preview {
+  display: block;
+}
+
+.zw-dropzone .preview .progress {
+  height: 5px;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+#currentSong {
+  padding: 10px;
+  position: relative;
+  display: none;
+}
+
+#currentSong.currentSong {
+  display: block;
+}
+
+#currentSong .progress {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  height: 8px;
+}
+
+#currentSong .progress .progress-bar {
+  transition: none;
+}
+
+#currentSong .mute {
+  color: #DDD;
+}
+
+#currentSong.muted .mute {
+  color: blue;
+}
+
+#currentSong img.avatar {
+  z-index: -100;
+  position: absolute;
+  left: -50px;
+  margin-right: 5px;
+  border-radius: 30px;
+  border: 1px solid #eee;
+  width: 60px;
+  height: 60px;
+}
+
+#currentSong img.albumArt {
+  margin-right: 8px;
+}
+
+@keyframes domChanged { from { background: yellow; } }
+@-webkit-keyframes domChanged { from { background: yellow; } }
+.ember-view { animation: domChanged 1s; -webkit-animation: domChanged 1s; }

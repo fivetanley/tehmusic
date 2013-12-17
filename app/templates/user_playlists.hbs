@@ -1,0 +1,11 @@
+<h2>playlists</h2>
+
+<div class="btn-group">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+    {{model.currentPlaylist.name}} &nbsp;<span class="caret"></span>
+  </button>
+
+  {{render "playlists" model.playlists}}
+</div>
+
+{{render "playlist" model.currentPlaylist}}

@@ -1,0 +1,11 @@
+<div class="instructions dz-clickable">Drop song (or click) here to add to playlist.</div>
+<div class="preview">
+  <img class="albumArt" {{bindAttr src=albumPicture}}>
+  <div class="container">
+    <span class="title">{{tags.title}}</span><br />
+    <span class="artist">{{tags.artist}}</span>
+  </div>
+  <div class="progress progress-striped active">
+    <div class="progress-bar" role="progressbar" {{bindAttr style=progressStyle}}></div>
+  </div>
+</div>

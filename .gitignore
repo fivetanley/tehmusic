@@ -1,0 +1,22 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# compiled output
+/dist
+/tmp
+
+# config
+.env
+
+# dependencies
+/node_modules
+/vendor/*
+!/vendor/loader.js
+!/vendor/ember-inflector
+
+# misc
+/.sass-cache
+/connect.lock
+/libpeerconnection.log
+.DS_Store
+Thumbs.db
+/coverage/*

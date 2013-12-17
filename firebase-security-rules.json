@@ -1,0 +1,47 @@
+{
+  "rules": {
+    "users": {
+      ".read": "auth != null",
+
+      "$username": {
+        ".write": "$username == auth.username"
+      }
+    },
+
+    "user_privates": {
+      "$username": {
+        ".read": "$username == auth.username",
+        ".write": "$username == auth.username"
+      }
+    },
+
+    "online_users": {
+      ".read": "auth != null",
+
+      "$username": {
+        ".write": "$username == auth.username"
+      }
+    },
+
+    "playlists": {
+      "$username": {
+        ".read": "$username == auth.username",
+        ".write": "$username == auth.username"
+      }
+    },
+
+    "songs": {
+      "$songid": {
+        ".read": "auth != null"
+      }
+    },
+
+    "current_song": {
+      ".read": "auth != null",
+
+      "done": {
+        ".write": "root.child('current_song').child('user_id').val() == auth.username"
+      }
+    }
+  }
+}
