@@ -81,3 +81,9 @@ $ grunt server
 
 TODO
 
+# Dedication
+
+TehMusic is dedicated to the memory of our friend Benji, who was taken
+too early by cancer. He had many passions, but one of his biggest was
+music, and sharing it with his friends. RIP Benji.
+
