@@ -77,9 +77,35 @@ You can now do some local testing by starting your development server:
 $ grunt server
 ```
 
+Now open http://localhost:8000/ in a browser.
+
 ## Deploying to Heroku (for production)
 
-TODO
+Create yourself an account at http://heroku.com/ and install the
+`heroku` command line tool. Then, inside your tehmusic checkout:
+
+```bash
+$ heroku apps:create
+```
+
+You'll get back a URL to hit your new app at, and it will add it as a
+git remote in your git repository.
+
+Now you need to configure you app. For every line in your `.env` file,
+do `heroku config:set <KEY>=<VALUE>`.
+
+Now you can push up your app:
+
+```bash
+$ git push heroku master
+```
+
+And then you should be live!
+
+Heroku dynos will shut down after a few minutes of inactivity, which is
+kinda sad for this app since it has a backend component that's always
+talking to firebase. To get around that, you can sign up for Pingdom and
+have it ping your app once a minute to keep the dyno running.
 
 # Dedication
 
