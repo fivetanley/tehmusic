@@ -168,6 +168,13 @@ module.exports = function(server) {
           user_id: newDj.id,
           start_time: (new Date()).getTime()
         });
+
+        // ... and add it to the song history
+        fbRef.child('history').push().set({
+          song_id: first.songId,
+          user_id: newDj.id,
+          start_time: (new Date()).getTime()
+        });
       });
 
     }
