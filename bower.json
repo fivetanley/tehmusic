@@ -11,7 +11,7 @@
     "dropzone": "~3.8.2",
     "id3-reader": "https://github.com/aadsm/JavaScript-ID3-Reader.git",
     "jqueryui": "~1.10.3",
-    "fireplace": "~0.0.2"
+    "fireplace": "~0.0.3"
   },
   "resolutions": {
     "ember": "1.2.0",
