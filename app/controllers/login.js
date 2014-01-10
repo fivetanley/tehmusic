@@ -21,7 +21,6 @@ export default Ember.Controller.extend({
         }
       }).then(function(response) {
         if (response.status === "ok") {
-          App.set('authInfo', response.auth);
           this.set('authInfo', response.auth);
           Ember.run.next(this, function() {
             this.transitionToRoute('');
@@ -38,6 +37,7 @@ export default Ember.Controller.extend({
         userRef = fb.child("/users/" + this.get('authInfo.username')),
         connectedUsersRef = fb.child("/online_users/" + this.get('authInfo.username'));
     App.set('userRef', userRef);
+    App.set('authInfo', this.get('authInfo'));
 
     fb.auth(this.get('authInfo.token'), function(err, auth) {
       if (err) {
